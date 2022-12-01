@@ -19,7 +19,7 @@ def day_01_calorie_counting
       end
 
       current_max = [current_max, running_total].max
-      running_total_list << running_total unless running_total.zero?
+      running_total_list << running_total
     
 
       current_max
