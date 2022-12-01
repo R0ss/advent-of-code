@@ -29,7 +29,7 @@ end
 
 if __FILE__ == $0
   Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
-    report = x.report("Question 1 performance") { day_01_calorie_counting }
+    report = x.report("Performance") { day_01_calorie_counting }
   end
   
   # Performance     user     system      total        real
