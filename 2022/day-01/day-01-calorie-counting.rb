@@ -28,8 +28,15 @@ def day_01_calorie_counting
 end
 
 if __FILE__ == $0
-  report = 0
   Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
     report = x.report("Question 1 performance") { day_01_calorie_counting }
   end
+  
+  #                                        Benchmark
+  #                           user     system      total        real
+  # Question 1 performance  0.001574   0.000087   0.001661 (  0.001657)
+  
+  # Solutions: 
+  #    part 1: 68923
+  #    part 2: 200044
 end
