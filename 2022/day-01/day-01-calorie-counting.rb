@@ -32,9 +32,8 @@ if __FILE__ == $0
     report = x.report("Question 1 performance") { day_01_calorie_counting }
   end
   
-  #                                        Benchmark
-  #                           user     system      total        real
-  # Question 1 performance  0.001574   0.000087   0.001661 (  0.001657)
+  # Performance     user     system      total        real
+  # (in seconds)  0.001574   0.000087   0.001661 (  0.001657)
   
   # Solutions: 
   #    part 1: 68923
