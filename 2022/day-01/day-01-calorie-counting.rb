@@ -3,6 +3,7 @@
 require 'benchmark'
 include Benchmark 
 
+# TODO: Spend more than 10 mins on a TDD solution!
 def day_01_calorie_counting
   File.open('input.txt','r') do |f|
       current_max = 0
