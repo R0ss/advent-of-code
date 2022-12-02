@@ -31,7 +31,7 @@ def calculateScore(player, opponent)
 end
 
 def day_02_rock_paper_scissors
-  File.open('test/controllers/internal/input.txt','r') do |f|
+  File.open('input.txt','r') do |f|
       score = 0
       while line = f.gets
         playersActions = line.split(' ')
