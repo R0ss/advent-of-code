@@ -48,9 +48,9 @@ if __FILE__ == $0
   end
   
   # Performance     user     system      total        real
-  # (in seconds)  
+  # (in seconds)  0.004155   0.000234   0.004389 (  0.004618)
   
   # Solutions: 
-  #    part 1: 
+  #    part 1: 13809
   #    part 2: 
 end
