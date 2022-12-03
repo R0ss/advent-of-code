@@ -18,11 +18,10 @@ def day_03_rucksack
       data = []
       while line = f.gets
         first, second = line.chars.each_slice(line.length / 2).map(&:join)
-
-        data << line
-
         extra_char = get_matching_char(first.split(''), second.split(''))
         sum << extra_char
+        
+        data << line
       end
 
       puts sum.flatten.map{ |x| x.ord - (x.ord < 'a'.ord ? 38 : 96) }.sum
