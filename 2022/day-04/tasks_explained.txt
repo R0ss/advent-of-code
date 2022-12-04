@@ -1,0 +1,8 @@
+You are provided with a list of strings. Each line includes a comma-separated 
+set of sub-strings. There are only 2 sub-strings per line. Each sub-string 
+is represents a contiguous range of numbers using a start and end number separated 
+by a dash.
+
+Part 1: Count the number of lines where one range is a subset of the other.
+
+Part 2: Count the number of lines where one range overlaps with the other.

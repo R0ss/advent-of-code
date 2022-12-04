@@ -1,0 +1,15 @@
+You are provided with a list of strings of varying lengths.
+
+Encoding Algorithm: 
+                "a" to "z" correspond to ints 1 to 26 respectively
+                "A" to "Z" correspond to ints 27 to 52 respectively
+
+Part 1: For each line, split the string into 2 equal halves and find the character 
+        that appears in both halves (these are the "duplicate characters"). Next,
+        encode all of the "duplicate characters" into integers (using the encoding algorithm),
+        then figure out the sum of those numbers.
+
+Part 2: Group the first three lines together. Identify the common character among them.
+        Repeat this process for all of the lines (i.e. grouping them and finding the
+        common character). Next take all of the common characters and encode them into
+        integers (using the encoding algorithm), then figure out the sum of those numbers.

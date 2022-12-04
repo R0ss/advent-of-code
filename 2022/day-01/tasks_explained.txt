@@ -1,0 +1,6 @@
+You are provided with a list of integers, one per line.
+A blank line is used to delimit a group of integers.
+
+Part 1: Find the largest sum of a group of integers.
+
+Part 2: Find the sum of the largest 3 groups of integers.

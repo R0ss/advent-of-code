@@ -1,0 +1,15 @@
+You are provided with a list of strings representing a game of "Rock, Paper, Scissors".
+Each line represents one round of the game. The game is scored after each round.
+A line includes 2 space-delimited characters. The first character is the opponent's
+move, where "A" is "rock", "B" is "paper", and "Z" is scissors. The second character,
+can be "X", "Y", or "Z". The meaning of the second character changes in part 1 and part 2
+of the puzzle.
+
+Scoring: Winning a round is 6 points, a draw is 3 points, a loss is 0. 
+Playing "rock", "paper, or "scissors" awards the player 1, 2, or 3 points respectively.
+
+Part 1: Calculate the total score when "X", "Y", and "Z" have the same meaning as "A", "B", and "C".
+
+Part 2: Calculate the total score when "X", "Y", and "Z" are the outcomes of the round (for the player).
+        Where "X", "Y", and "Z" correspond to a player "losing", "drawing", or "winning" the round,
+        given the opponent's move for that round.
