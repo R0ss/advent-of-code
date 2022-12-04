@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 
+# Come up with a quick solution to satisfy the requirements
+# as rapidly as possible! Ruby is great for this :)
+
 require 'benchmark'
 include Benchmark 
 
-# TODO: Spend more than 10 mins on a TDD solution!
 def playerWins(player, opponent)
   return true if player == 'x' && opponent == 'c'
   return true if player == 'y' && opponent == 'a'
@@ -30,21 +32,40 @@ def calculateScore(player, opponent)
   totalScore
 end
 
-def day_02_rock_paper_scissors
-  File.open('input.txt','r') do |f|
-      score = 0
+def get_player_move(player, opponent)
+  return 'z' if player == 'x' && opponent == 'a'
+  return 'x' if player == 'y' && opponent == 'a'
+  return 'y' if player == 'z' && opponent == 'a'
+
+  return player if opponent == 'b'
+
+  return 'y' if player == 'x' && opponent == 'c'
+  return 'z' if player == 'y' && opponent == 'c'
+  return 'x' if player == 'z' && opponent == 'c'
+end
+
+def rough_draft
+  File.open('2022/day-02/input.txt','r') do |f|
+      score_part_1 = 0
+      score_part_2 = 0
       while line = f.gets
         playersActions = line.split(' ')
-        score += calculateScore(playersActions[1].downcase, playersActions[0].downcase)
+
+        player = playersActions[1].downcase
+        opponent = playersActions[0].downcase
+
+        score_part_1 += calculateScore(player, opponent)
+        score_part_2 += calculateScore(get_player_move(player, opponent), opponent)
       end
 
-      puts score
+      puts score_part_1
+      puts score_part_2
     end
 end
 
 if __FILE__ == $0
   Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
-    report = x.report("Performance") { day_02_rock_paper_scissors }
+    report = x.report("Performance") { rough_draft }
   end
   
   # Performance     user     system      total        real
@@ -52,5 +73,5 @@ if __FILE__ == $0
   
   # Solutions: 
   #    part 1: 13809
-  #    part 2: 
+  #    part 2: 12316
 end

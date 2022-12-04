@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 
-require 'benchmark'
-include Benchmark 
+# Come up with a quick solution to satisfy the requirements
+# as rapidly as possible! Ruby is great for this :)
 
-# Took me 39 mins for both problems!
+require 'benchmark'
+include Benchmark
+
 def get_matching_char(set_a, set_b)
   set_a.each { |x| set_b.each { |y| return y if x == y } }
 end
@@ -12,8 +14,8 @@ def get_matching_char_from_set(set_a, set_b, set_c)
   set_a.split('').each { |x| set_b.split('').each { |y| set_c.split('').each { |z| return z if x == y && y == z } } }
 end
 
-def day_03_rucksack
-  File.open('input.txt','r') do |f|
+def rough_draft
+  File.open('2022/day-03/input.txt','r') do |f|
       sum = []
       data = []
       while line = f.gets
@@ -31,7 +33,7 @@ end
 
 if __FILE__ == $0
   Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
-    report = x.report("Performance") { day_03_rucksack }
+    report = x.report("Performance") { rough_draft }
   end
   
   # Performance     user     system      total        real

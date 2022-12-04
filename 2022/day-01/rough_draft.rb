@@ -1,11 +1,13 @@
 #!/usr/bin/env ruby
 
+# Come up with a quick solution to satisfy the requirements
+# as rapidly as possible! Ruby is great for this :)
+
 require 'benchmark'
 include Benchmark 
 
-# TODO: Spend more than 10 mins on a TDD solution!
-def day_01_calorie_counting
-  File.open('input.txt','r') do |f|
+def rough_draft
+  File.open('2022/day-01/input.txt','r') do |f|
       current_max = 0
       running_total = 0
       running_total_list = []
@@ -23,14 +25,14 @@ def day_01_calorie_counting
       running_total_list << running_total
     
 
-      current_max
-      running_total_list.max(3).sum
+      puts current_max
+      puts running_total_list.max(3).sum
     end
 end
 
 if __FILE__ == $0
   Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
-    report = x.report("Performance") { day_01_calorie_counting }
+    report = x.report("Performance") { rough_draft }
   end
   
   # Performance     user     system      total        real

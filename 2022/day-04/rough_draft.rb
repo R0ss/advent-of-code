@@ -1,10 +1,13 @@
 #!/usr/bin/env ruby
 
+# Come up with a quick solution to satisfy the requirements
+# as rapidly as possible! Ruby is great for this :)
+
 require 'benchmark'
 include Benchmark 
 
-def day_04_puzzle_1
-  File.open('test/controllers/internal/input copy.txt','r') do |f|
+def rough_draft
+  File.open('2022/day-04/input.txt','r') do |f|
       list_of_lists = []
       while line = f.gets
         list_of_lists << line.split(Regexp.union([',', '-'])).map(&:to_i)
@@ -19,7 +22,7 @@ end
 
 if __FILE__ == $0
   Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
-    report = x.report("Performance") { day_04_puzzle_1 }
+    report = x.report("Performance") { rough_draft }
   end
   
   # Performance     user     system      total        real
