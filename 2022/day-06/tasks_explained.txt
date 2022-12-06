@@ -1,0 +1,8 @@
+You are provided with a single long string on one line.
+
+Part 1: Parse the string from left to right and return 
+        the number of the characters parsed until you 
+        find a set of 4 unique characters in a row. 
+
+Part 2: Similar to part 1, except now you need to find
+        a set of 14 characters in a row.

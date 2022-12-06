@@ -1,0 +1,14 @@
+Your input includes an initial state of a series of columns numbered 1 to 9. 
+Within each column is a stack of letters. Each item in the stack has the following 
+form: [X]. Each column can have a stack of arbitrary height, and the letters can 
+appear multiple times.
+
+Below the "initial state" diagram is a set of instructions for moving items from
+one column to the next. The instructions have a consistent format of: "move 1 from
+2 to 3", where "1" is the number of items, and "2"/"3" are the origin/destination
+columns. You must apply all of the instructions in order to the initial state of the
+columns in order to get the end state.
+
+Part 1: Move the items one at a time from one column to the next
+
+Part 2: Move all of the items from one column to the next in one step
