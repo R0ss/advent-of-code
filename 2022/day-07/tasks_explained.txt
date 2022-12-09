@@ -1,0 +1,26 @@
+Your input is a history of terminal commands for traversing and inspecting
+a set of directories and files. The history can include the following commands:
+
+"$ cd ..": Going to the parent directory
+"$ ls": Listing the files and directories in the current folder
+"$ cd pcqjncwl": Going to one of the directories (called "pcqjncwl"),
+                 which exists within the current directory
+
+Note: When "$ ls" is called, the following files and folders (respectively)
+      will be listed in the following format:
+      
+      "65156 bfmt.zcb": Where the file size ("65156") and filename ("bfmt.zcb")
+                        are presented with a space delimiter
+      "dir nsq": Where the subfolder name ("nsq") is presented after: "dir "
+
+Part 1: Identify all of the directories with contents whose sizes add up to
+        at most 100,000. Then add up the sizes of all of the directories found.
+        The solution can end up counting the same files multiple times across
+        directories.
+
+Part 2: Suppose that you want to create a new memory partition of 30,000,000.
+        Assuming that you have a max size of 70,000,000, figure out how much
+        space you need to free up in order to have enough space for the partition.
+        Then find the smallest directory that can be deleted in order to increase
+        the available space to 30,000,000.
+        
