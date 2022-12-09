@@ -7,7 +7,7 @@ require 'benchmark'
 include Benchmark 
 
 def rough_draft
-  File.open('/Users/ross.gatih/advent-of-code/2022/day-07/input.txt','r') do |f|
+  File.open('2022/day-07/input.txt','r') do |f|
 
       curr_dir = []
       sizes = {}
